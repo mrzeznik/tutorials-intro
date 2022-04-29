@@ -9,16 +9,19 @@ namespace HelloWorld
         {
             // var upperTextArrayArgs = TextModifications.MakeArrayTextUpper(args);
 
+            var mouseToCheck = new Mouse();
+
             // create a new Mouse
-            var mouseToCheck = new Mouse()
+            if (args.Length == 6)
             {
-                Brand = args[0],
-                IsWireless = bool.Parse(args[1]),
-                NumberOfButtons = int.Parse(args[2]),
-                Color = args[3],
-                HasLight = bool.Parse(args[4]),
-                Price = decimal.Parse(args[5])
-            };
+                mouseToCheck.Brand = args[0];
+                mouseToCheck.IsWireless = bool.Parse(args[1]);
+                mouseToCheck.NumberOfButtons = int.Parse(args[2]);
+                mouseToCheck.Color = args[3];
+                mouseToCheck.HasLight = bool.Parse(args[4]);
+                mouseToCheck.Price = decimal.Parse(args[5]);
+            }
+
             var mouseToCheck2 = new Mouse() { Brand = "Logitech" };
             var mouseToCheck3 = new Mouse() { Brand = "Microsoft", Color = "blue" };
             var mouseToCheck4 = new Mouse() { Brand = "A4Tech", Color = "red", IsWireless = false };
@@ -37,8 +40,9 @@ namespace HelloWorld
                     System.Console.WriteLine($"{mouse.Brand} {mouse.Id}: This is a wired mouse.");
                 }
 
-                if (mouse.Color != "blue") System.Console.WriteLine($"{mouse.Brand} {mouse.Id}: This mouse is not blue, I don't like it.");
+                if (mouse.Color != "blue") System.Console.Write("This mouse is not blue, I don't like it.");
             }
+
             return;
         }
     }
