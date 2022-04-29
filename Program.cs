@@ -6,29 +6,12 @@ namespace HelloWorld
     {
         public static void Main(string[] args)
         {
-            var upperTextArrayArgs = MakeArrayTextUpper(args);
+            var upperTextArrayArgs = TextModifications.MakeArrayTextUpper(args);
 
-            foreach (var line in upperTextArrayArgs)
-            {
-                System.Console.WriteLine(line);
-            }
+            
 
 
             return;
-        }
-
-        public static string[] MakeArrayTextUpper(string[] sourceArray)
-        {
-            if (sourceArray == null || sourceArray.Length == 0) return new string[0];
-
-            var targetArray = new string[sourceArray.Length];
-
-            for (int i = 0; i < sourceArray.Length; i++)
-            {
-                targetArray[i] = sourceArray[i].ToUpper();
-            }
-
-            return targetArray;
         }
     }
 }
