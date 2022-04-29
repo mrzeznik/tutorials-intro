@@ -1,10 +1,13 @@
-﻿namespace HelloWorld
+﻿using System.Linq;
+
+namespace HelloWorld
 {
     public static class Program
     {
         public static void Main(string[] args)
         {
             var upperTextArrayArgs = MakeArrayTextUpper(args);
+
 
             return;
         }
@@ -13,7 +16,7 @@
         {
             if (sourceArray == null || sourceArray.Length == 0) return new string[0];
 
-            var targetArray = new string[sourceArray.Length - 1];
+            var targetArray = new string[sourceArray.Length];
 
             for (int i = 0; i < sourceArray.Length; i++)
             {
