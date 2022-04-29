@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace HelloWorld
 {
@@ -33,16 +32,10 @@ namespace HelloWorld
 
             foreach (var mouse in mouseList)
             {
-                if (mouse.IsWireless)
-                {
-                    System.Console.WriteLine($"{mouse.Brand} {mouse.Id}: This is a wireless mouse.");
-                }
-                else
-                {
-                    System.Console.WriteLine($"{mouse.Brand} {mouse.Id}: This is a wired mouse.");
-                }
+                System.Console.WriteLine($"{mouse.Brand}: This mouse is color {mouse.Color} and my favourite color is: " + MY_FAVOURITE_COLOR);
 
-                if (mouse.Color != MY_FAVOURITE_COLOR) System.Console.Write($"This mouse is not {MY_FAVOURITE_COLOR}, I don't like it.");
+                bool doILikeIt = (mouse.Color == MY_FAVOURITE_COLOR);
+                System.Console.WriteLine($"{mouse.Brand}: Is it my favourite: {doILikeIt}.");
             }
 
             return;
