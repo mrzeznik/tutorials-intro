@@ -5,6 +5,8 @@ namespace HelloWorld
 {
     public static class Program
     {
+        private const string MY_FAVOURITE_COLOR = "blue";
+
         public static void Main(string[] args)
         {
             // var upperTextArrayArgs = TextModifications.MakeArrayTextUpper(args);
@@ -40,7 +42,7 @@ namespace HelloWorld
                     System.Console.WriteLine($"{mouse.Brand} {mouse.Id}: This is a wired mouse.");
                 }
 
-                if (mouse.Color != "blue") System.Console.Write("This mouse is not blue, I don't like it.");
+                if (mouse.Color != MY_FAVOURITE_COLOR) System.Console.Write($"This mouse is not {MY_FAVOURITE_COLOR}, I don't like it.");
             }
 
             return;
