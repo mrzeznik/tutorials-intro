@@ -8,6 +8,11 @@ namespace HelloWorld
         {
             var upperTextArrayArgs = MakeArrayTextUpper(args);
 
+            foreach (var line in upperTextArrayArgs)
+            {
+                System.Console.WriteLine(line);
+            }
+
 
             return;
         }
