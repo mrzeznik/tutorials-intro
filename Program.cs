@@ -4,16 +4,23 @@
     {
         public static void Main(string[] args)
         {
-            for (int i = 0; i < args.Length; i++)
-            {
-                var upperText = args[i].ToUpper();
-
-                System.Console.WriteLine(upperText);
-            }
-
-            System.Console.WriteLine("Hello, World!");
+            var upperTextArrayArgs = MakeArrayTextUpper(args);
 
             return;
+        }
+
+        public static string[] MakeArrayTextUpper(string[] sourceArray)
+        {
+            if (sourceArray == null || sourceArray.Length == 0) return new string[0];
+
+            var targetArray = new string[sourceArray.Length - 1];
+
+            for (int i = 0; i < sourceArray.Length; i++)
+            {
+                targetArray[i] = sourceArray[i].ToUpper();
+            }
+
+            return targetArray;
         }
     }
 }
